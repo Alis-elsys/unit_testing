@@ -1,6 +1,6 @@
-#from flask import Flask, render_template, request
+from flask import Flask, render_template, request
 
-#app = Flask(__name__, template_folder='C:/Users/HP/Documents/School/Практика/praktika/flask/src/templates')
+app = Flask(__name__, template_folder='C:/Users/HP/Documents/School/Практика/praktika/flask/src/templates')
 
 def kelvin_to_fahrenheit(K):
     F = K * 1.8 - 459.67
@@ -26,11 +26,11 @@ def celsius_to_fahrenheit(C):
     F = C * 1.8 + 32
     return F
 
-#@app.route('/')
-#def home():
- #   return render_template('index.html')
+@app.route('/')
+def home():
+   return render_template('index.html')
 
-#@app.route('/convert', methods=['POST'])
+@app.route('/convert', methods=['POST'])
 def convert(value):
     number = float(value[:-1])
     unit = value[-1].upper()
@@ -51,8 +51,8 @@ def convert(value):
     else:
         conversion_result = "Invalid choice. Please try again."
 
-    return conversion_result
-    #return render_template('index.html', conversion_result=conversion_result)
+    #return conversion_result
+    return render_template('index.html', conversion_result=conversion_result)
 
-#if __name__ == '__main__':
- #   app.run()
+if __name__ == '__main__':
+   app.run()

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Converter</title>
+</head>
+
+<style>
+    body{
+        background-color: #f6d2d2;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    h1{
+        text-align: center;
+        color: #000000;
+    }
+    h2{
+        text-align: center;
+        color: #000000;
+    }
+    form{
+        text-align: center;
+    }
+    input{
+        width: 300px;
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid #000000;
+        padding-left: 10px;
+        font-size: 16px;
+        background-color: #faf0f0;
+        &:focus{
+            background-color: #faf0f0;
+        }
+    }
+    button{
+        width: 100px;
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid #000000;
+        background-color: #ffffff;
+        font-size: 16px;
+        cursor: pointer;
+        &:hover{
+            background-color: #5bd72a;
+            color: #ffffff;
+        }
+    }
+    pre{
+        text-align: center;
+        font-size: 18px;
+
+    }
+</style>
+
+<body>
+    <h1>Temperature Converter</h1>
+    <form action="/convert" method="POST">
+        <input type="text" name="value" placeholder="Enter a value (e.g., 30K, 50C, 120F)">
+        <button type="submit">Convert</button>
+    </form>
+    <h2>Conversion Result:</h2>
+    <pre>{{ conversion_result }}</pre>
+</body>
+</html>
