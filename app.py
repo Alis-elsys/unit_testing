@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from builtins import float
 
 app = Flask(__name__, template_folder='C:/Users/HP/Documents/School/Практика/praktika/flask/src/templates')
 
